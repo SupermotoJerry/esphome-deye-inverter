@@ -288,27 +288,27 @@ select:
       "Generator": 2
       "Both": 3
 
-#switch:
-#  - platform: modbus_controller
-#    use_write_multiple: true
-#    modbus_controller_id: ${modbus_controller_id}
-#    name: "Force Off Grid"
-#    id: switch_off_grid
-#    register_type: holding
-#    address: 281
-#    bitmask: 1
-#    entity_category: config
-#    icon: "mdi:transmission-tower-off"
+switch:
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    name: "Force Off Grid"
+    id: switch_off_grid
+    register_type: holding
+    address: 281
+    bitmask: 1
+    entity_category: config
+    icon: "mdi:transmission-tower-off"
 
-#  - platform: modbus_controller
-#    use_write_multiple: true
-#    modbus_controller_id: ${modbus_controller_id}
-#    name: "Generator Grid Side"
-#    register_type: holding
-#    address: 280
-#    bitmask: 12 
-#    entity_category: config
-#    icon: "mdi:generator-stationary"
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    name: "Generator Grid Side"
+    register_type: holding
+    address: 280
+    bitmask: 12 
+    entity_category: config
+    icon: "mdi:generator-stationary"
 
 number:
   - platform: modbus_controller
@@ -374,6 +374,7 @@ number:
     address: 290
     value_type: U_WORD
     icon: "mdi:sine-wave"
+
 
 
 
