@@ -80,14 +80,14 @@ sensor:
     icon: "mdi:engine"
 
 binary_sensor:
-  - platform: modbus_controller       
-    modbus_controller_id: ${modbus_controller_id}
-    name: "Generator Connected Status"
-    id: generator_connected_status
-    register_type: holding
-    address: 195
-    device_class: running
-    icon: "mdi:power"
+#  - platform: modbus_controller       
+#    modbus_controller_id: ${modbus_controller_id}
+#    name: "Generator Connected Status"
+#    id: generator_connected_status
+#    register_type: holding
+#    address: 195
+#    device_class: running
+#    icon: "mdi:power"
 
 select:
   - platform: modbus_controller
@@ -219,3 +219,4 @@ number:
     address: 224
     value_type: U_WORD
     icon: "mdi:solar-power"
+
