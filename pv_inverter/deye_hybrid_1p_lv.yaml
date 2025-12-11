@@ -36,7 +36,7 @@ packages:
   inverter: !include packages/deye_hybrid_1p/inverter.yaml
   pv: !include packages/deye_hybrid_1p/pv.yaml
   tou: !include packages/deye_hybrid_1p/tou.yaml
-  time_sync: !include packages/deye_hybrid_3p/time_sync.yaml
+  time_sync: !include packages/deye_hybrid_1p/time_sync.yaml
 
 script:
   - id: set_safe_modbus_registers
@@ -57,6 +57,7 @@ script:
           id: switch_solar_sell
       - switch.turn_${default_force_off_grid}:
           id: switch_off_grid
+
 
 
 
