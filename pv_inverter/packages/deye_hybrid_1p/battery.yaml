@@ -76,6 +76,7 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
     name: "Battery Temperature"
+    id: battery_temperature
     register_type: holding
     address: 182
     unit_of_measurement: "°C"
@@ -104,6 +105,7 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
     name: "Battery State of Charge"
+    id: battery_soc
     register_type: holding
     address: 184
     unit_of_measurement: "%"
@@ -127,6 +129,7 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
     name: "Battery Current"
+    id: battery_current
     register_type: holding
     address: 191
     unit_of_measurement: "A"
@@ -548,4 +551,5 @@ number:
     device_class: current
     value_type: U_WORD
     icon: "mdi:battery-charging-50"
+
 
