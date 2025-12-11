@@ -40,10 +40,28 @@ esp32:
   framework:
     type: esp-idf
 
+##Pins required for LilyGo T-CAN485 board
+output:
+  - platform: gpio
+    id: ENABLE_PIN # Enable the chip
+    pin:
+      number: GPIO19
+      inverted: true
+  - platform: gpio
+    id: SE_PIN # Enable autodirection
+    pin:
+      number: GPIO17
+      inverted: true
+  - platform: gpio
+    id: ENABLE_5V_PIN # Enable 5V pin for RS485 chip
+    pin:
+      number: GPIO16
+      inverted: true
+
 uart:
-  # Default TX and RX pins, if TTL converter is connected differently, set appropriate pins
-  tx_pin: GPIO17
-  rx_pin: GPIO16
+  # Default TX and RX pins for LilyGo T-CAN485
+  tx_pin: GPIO22
+  rx_pin: GPIO21
 
 modbus:
 #  flow_control_pin: GPIO4 # Uncomment and set appropriate pin if your TTL converter requires it
