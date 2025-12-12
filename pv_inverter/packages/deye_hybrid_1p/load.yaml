@@ -46,6 +46,8 @@ sensor:
     unit_of_measurement: "W"
     device_class: power
     accuracy_decimals: 0
+    filters:
+      - multiply: 10
     value_type: S_WORD
     icon: "mdi:home-lightning-bolt"
 
@@ -57,6 +59,8 @@ sensor:
     unit_of_measurement: "W"
     device_class: power
     accuracy_decimals: 0
+    filters:
+      - multiply: 10
     value_type: S_WORD
     icon: "mdi:home-lightning-bolt"
 
@@ -68,6 +72,8 @@ sensor:
     unit_of_measurement: "W"
     device_class: power
     accuracy_decimals: 0
+    filters:
+      - multiply: 10
     value_type: S_WORD
     icon: "mdi:home-lightning-bolt"
 
@@ -189,3 +195,4 @@ sensor:
       );
 
     icon: "mdi:home-lightning-bolt"
+
