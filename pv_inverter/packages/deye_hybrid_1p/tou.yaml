@@ -441,6 +441,38 @@ number:
           id: time_of_use_6_out_power
           value: !lambda "return x;"
 
+#  - platform: template
+#    name: "Time of Use All SoC"
+#    id: time_of_use_all_soc
+#    unit_of_measurement: "%"
+#    device_class: battery
+#    min_value: 0
+#    max_value: 100
+#    step: 1
+#    update_interval: 1s
+#    icon: "mdi:battery-clock"
+#    disabled_by_default: true
+#    lambda: |-
+#      return id(time_of_use_1_soc).state;
+#    set_action:
+#     - number.set:
+#          id: time_of_use_1_soc
+#          value: !lambda "return x;"
+#      - number.set:
+#          id: time_of_use_2_soc
+#          value: !lambda "return x;"
+#      - number.set:
+#          id: time_of_use_3_soc
+#          value: !lambda "return x;"
+#      - number.set:
+#          id: time_of_use_4_soc
+#          value: !lambda "return x;"
+#      - number.set:
+#          id: time_of_use_5_soc
+#          value: !lambda "return x;"
+#      - number.set:
+#          id: time_of_use_6_soc
+#          value: !lambda "return x;"
   - platform: template
     name: "Time of Use All SoC"
     id: time_of_use_all_soc
@@ -449,28 +481,15 @@ number:
     min_value: 0
     max_value: 100
     step: 1
-    update_interval: 1s
+    update_interval: never   # IMPORTANT
     icon: "mdi:battery-clock"
-    disabled_by_default: true
-    lambda: |-
-      return id(time_of_use_1_soc).state;
     set_action:
-      - number.set:
-          id: time_of_use_1_soc
-          value: !lambda "return x;"
-      - number.set:
-          id: time_of_use_2_soc
-          value: !lambda "return x;"
-      - number.set:
-          id: time_of_use_3_soc
-          value: !lambda "return x;"
-      - number.set:
-          id: time_of_use_4_soc
-          value: !lambda "return x;"
-      - number.set:
-          id: time_of_use_5_soc
-          value: !lambda "return x;"
-      - number.set:
-          id: time_of_use_6_soc
-          value: !lambda "return x;"
+      - number.set: { id: time_of_use_1_soc, value: !lambda "return x;" }
+      - number.set: { id: time_of_use_2_soc, value: !lambda "return x;" }
+      - number.set: { id: time_of_use_3_soc, value: !lambda "return x;" }
+      - number.set: { id: time_of_use_4_soc, value: !lambda "return x;" }
+      - number.set: { id: time_of_use_5_soc, value: !lambda "return x;" }
+      - number.set: { id: time_of_use_6_soc, value: !lambda "return x;" }
+
+
 
