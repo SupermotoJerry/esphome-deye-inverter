@@ -136,7 +136,7 @@ sensor:
     device_class: current
     accuracy_decimals: 2
     filters:
-      - multiply: 0.01
+      - multiply: 0.1
     value_type: S_WORD
     icon: "mdi:current-dc"
 
@@ -551,5 +551,6 @@ number:
     device_class: current
     value_type: U_WORD
     icon: "mdi:battery-charging-50"
+
 
 
