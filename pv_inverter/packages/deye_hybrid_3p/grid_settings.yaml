@@ -20,7 +20,7 @@ esphome:
   devices:
     - id: grid_settings_device
       name: "${friendly_name} Grid Settings"
-      relation: via
+      relation: child
 
 switch:
   - platform: template

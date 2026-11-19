@@ -26,7 +26,7 @@ esphome:
   devices:
     - id: esp_board
       name: ${friendly_name} ESP Board
-      relation: via
+      relation: child
 
 logger:
   level: WARN
