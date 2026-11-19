@@ -16,10 +16,11 @@
 # Writes are blocked unless "Allow Changes (AT YOUR OWN RISK)" is on. Not included by default.
 
 esphome:
-  min_version: "2025.7.0"
+  min_version: "2026.11.0"
   devices:
     - id: grid_settings_device
       name: "${friendly_name} Grid Settings"
+      relation: via
 
 switch:
   - platform: template
